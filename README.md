@@ -110,6 +110,7 @@ Struktur folder dari project ini adalah sebagai berikut:
 │   │   └── service.go
 │   ├── <domain>
 │   │   ├── http_handler.go
+│   │   ├── middleware.go
 │   │   ├── <storage>_repository.go
 │   │   └── service.go
 │   ├── config
