@@ -161,7 +161,7 @@ Daftar environment yang digunakan pada project ini.
 
 ## Testing
 
-Project ini menggunakan library [stretchr/testify](github.com/stretchr/testify) sebagai library untuk testing. Untuk
+Project ini menggunakan library [stretchr/testify](https://github.com/stretchr/testify) sebagai library untuk testing. Untuk
 melakukan testing, silahkan jalankan perintah berikut:
 
 ```bash
@@ -170,7 +170,7 @@ go test ./...
 
 ## Swagger Generation
 
-Project ini menggunakan library [swaggo/swag](github.com/swaggo/swag) sebagai library untuk generate swagger. Untuk
+Project ini menggunakan library [swaggo/swag](https://github.com/swaggo/swag) sebagai library untuk generate swagger. Untuk
 mengenerate swagger, silahkan jalankan perintah berikut:
 
 ```bash
