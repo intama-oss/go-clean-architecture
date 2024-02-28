@@ -36,12 +36,12 @@ func TestMysqlAuthorRepository_GetByID(t *testing.T) {
 	db, mock, err := mockDBConnection()
 	assert.NoError(t, err)
 
-	query := "SELECT * FROM `authors` WHERE `authors`.`id` = ? ORDER BY `authors`.`id` LIMIT 1"
+	query := "SELECT * FROM `authors` WHERE `authors`.`id` = ? ORDER BY `authors`.`id` LIMIT ?"
 
 	userID := uint(1)
 	rows := sqlmock.NewRows([]string{"id", "name", "created_at", "updated_at"}).
 		AddRow(1, "Author 1", time.Now(), time.Now())
-	mock.ExpectQuery(regexp.QuoteMeta(query)).WithArgs(userID).WillReturnRows(rows)
+	mock.ExpectQuery(regexp.QuoteMeta(query)).WithArgs(userID, 1).WillReturnRows(rows)
 
 	repo := NewMysqlAuthorRepository(db)
 	author, err := repo.GetByID(userID)

@@ -14,13 +14,11 @@ var (
 )
 
 func Setup(cfg config.Config) {
-	loggerOnce.Do(func() {
-		if cfg.IsDevelopment {
-			l := zerolog.New(zerolog.ConsoleWriter{Out: os.Stdout, TimeFormat: time.RFC3339}).With().Timestamp().Logger()
-			Logger = &l
-			return
-		}
-		l := zerolog.New(os.Stderr).With().Timestamp().Logger()
+	if cfg.IsDevelopment {
+		l := zerolog.New(zerolog.ConsoleWriter{Out: os.Stdout, TimeFormat: time.RFC3339}).With().Timestamp().Logger()
 		Logger = &l
-	})
+		return
+	}
+	l := zerolog.New(os.Stderr).With().Timestamp().Logger()
+	Logger = &l
 }
