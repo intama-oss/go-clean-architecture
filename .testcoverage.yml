@@ -1,5 +1,5 @@
 profile: cover.out
-local-prefix: "go_clean_architecture"
+local-prefix: "github.com/intama-oss/go-clean-architecture"
 threshold:
   file: 60
   package: 80
