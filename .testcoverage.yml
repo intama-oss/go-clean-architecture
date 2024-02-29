@@ -1,10 +1,13 @@
 profile: cover.out
-local-prefix: "go_clean_architecture"
+local-prefix: "github.com/intama-oss/go-clean-architecture"
 threshold:
   file: 60
   package: 80
   total: 80
 exclude:
   paths:
-    - \.pb\.go$    # excludes all protobuf generated files
-    - \mocks?\.go$ # excludes all mock files
+    - \.pb\.go$ # excludes all protobuf generated files
+    - mocks/ # excludes all mocks
+    - docs/ # excludes all documentation
+    - cmd/ # excludes all command line interfaces
+    - internal/infrastructure/ # excludes all infrastructure

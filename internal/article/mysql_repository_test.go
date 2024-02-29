@@ -36,7 +36,7 @@ func TestMysqlArticleRepository_Fetch(t *testing.T) {
 	db, mock, err := mockDBConnection()
 	assert.NoError(t, err)
 
-	query := "SELECT * FROM `articles` WHERE title LIKE ? ORDER BY created_at DESC LIMIT 10"
+	query := "SELECT * FROM `articles` WHERE title LIKE ? ORDER BY created_at DESC LIMIT ?"
 
 	expectedTitle := "title"
 	expectedContent := "content"
@@ -47,7 +47,7 @@ func TestMysqlArticleRepository_Fetch(t *testing.T) {
 		AddRow(1, expectedTitle, expectedContent, expectedAuthorID, expectedCreatedAt, expectedUpdatedAt)
 
 	mock.ExpectQuery(regexp.QuoteMeta(query)).
-		WithArgs("%" + expectedTitle + "%").
+		WithArgs("%"+expectedTitle+"%", 10).
 		WillReturnRows(rows)
 
 	repo := NewMysqlArticleRepository(db)
@@ -80,7 +80,7 @@ func TestMysqlArticleRepository_GetByID(t *testing.T) {
 	db, mock, err := mockDBConnection()
 	assert.NoError(t, err)
 
-	queryArticle := "SELECT * FROM `articles` WHERE `articles`.`id` = ? ORDER BY `articles`.`id` LIMIT 1"
+	queryArticle := "SELECT * FROM `articles` WHERE `articles`.`id` = ? ORDER BY `articles`.`id` LIMIT ?"
 
 	expectedArticleID := 1
 	expectedTitle := "title"
@@ -92,7 +92,7 @@ func TestMysqlArticleRepository_GetByID(t *testing.T) {
 		AddRow(expectedArticleID, expectedTitle, expectedContent, expectedAuthorID, expectedCreatedAt, expectedUpdatedAt)
 
 	mock.ExpectQuery(regexp.QuoteMeta(queryArticle)).
-		WithArgs(expectedArticleID).
+		WithArgs(expectedArticleID, 1).
 		WillReturnRows(rowsArticle)
 
 	queryAuthor := "SELECT * FROM `authors` WHERE `authors`.`id` = ?"
