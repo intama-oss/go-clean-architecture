@@ -4,13 +4,11 @@ import (
 	"github.com/rs/zerolog"
 	"go-clean-architecture/internal/config"
 	"os"
-	"sync"
 	"time"
 )
 
 var (
-	Logger     *zerolog.Logger
-	loggerOnce sync.Once
+	Logger *zerolog.Logger
 )
 
 func Setup(cfg config.Config) {
