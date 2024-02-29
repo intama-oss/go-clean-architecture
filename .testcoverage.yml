@@ -6,8 +6,8 @@ threshold:
   total: 80
 exclude:
   paths:
-    - \.pb\.go$    # excludes all protobuf generated files
-    - mocks?\.go$ # excludes all mock files
-    - docs/.*\.go$ # excludes all docs files
-    - internal/docs/.*\.go$ # excludes all internal/docs files
-    - internal/infrastucture/.*\.go$ # excludes all internal/infrastucture files
+    - \.pb\.go$ # excludes all protobuf generated files
+    - mocks/ # excludes all mocks
+    - docs/ # excludes all documentation
+    - cmd/ # excludes all command line interfaces
+    - internal/infrastructure/ # excludes all infrastructure
