@@ -14,7 +14,7 @@ jobs:
       - uses: actions/setup-go@v3
 
       - name: Generate test coverage
-        run: go test ./... -coverprofile=./cover.out -coverpkg=./...
+        run: go test ./... -coverprofile=./cover.out
 
       - name: Check test coverage
         id: coverage
