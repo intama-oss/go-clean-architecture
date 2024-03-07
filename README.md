@@ -78,7 +78,6 @@ Project ini menggunakan beberapa library, yaitu:
 - [carlos0/env](https://https://github.com/caarlos0/env) sebagai library untuk mengakses environment.
 - [rs/zerolog](https://https://github.com/rs/zerolog) sebagai library untuk logging zero allocation.
 - [stretchr/testify](https://github.com/stretchr/testify) sebagai library untuk testing.
-- [h2non/gock](https://github.com/h2non/gock) sebagai library untuk mocking HTTP.
 - [go-faker/faker](https://github.com/go-faker/faker) sebagai library untuk membuat data palsu pada testing.
 - [go-playground/validator](https://github.com/go-playground/validator) sebagai library untuk validasi data.
 - [swaggo/swag](https://github.com/swaggo/swag) sebagai library untuk generate swagger.
