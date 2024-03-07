@@ -3,29 +3,40 @@ package utilities
 import (
 	"encoding/json"
 	"errors"
-	"net/http"
+	"github.com/gofiber/fiber/v2"
 )
 
-func GetPublicIP() (string, error) {
-	client := &http.Client{}
-	req, _ := http.NewRequest("GET", "https://api.ipify.org?format=json", nil)
+type ipResponse struct {
+	IP string `json:"ip"`
+}
 
+func GetPublicIP(ipCheckURL string) (string, error) {
+	agent := fiber.AcquireAgent()
+	req := agent.Request()
 	req.Header.Set("User-Agent", "go-clean-architecture")
-	resp, err := client.Do(req)
-	if err != nil {
-		return "", err
+	req.SetRequestURI(ipCheckURL + "/?format=json")
+
+	if err := agent.Parse(); err != nil {
+		return "", errors.New("failed to parse request")
 	}
 
-	defer resp.Body.Close()
-
-	var body map[string]interface{}
-	if err := json.NewDecoder(resp.Body).Decode(&body); err != nil {
-		return "", err
+	statusCode, body, errs := agent.Bytes()
+	if len(errs) > 0 {
+		return "", errors.New("failed to dial destination server")
 	}
 
-	if ip, ok := body["ip"].(string); ok {
-		return ip, nil
+	if statusCode != 200 {
+		return "", errors.New("failed to get public IP")
 	}
 
-	return "", errors.New("failed to get public IP")
+	var response ipResponse
+	if err := json.Unmarshal(body, &response); err != nil {
+		return "", errors.New("failed to unmarshal response")
+	}
+
+	if response.IP == "" {
+		return "", errors.New("failed to get public IP")
+	}
+
+	return response.IP, nil
 }
