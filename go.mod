@@ -5,7 +5,7 @@ go 1.21
 require (
 	github.com/DATA-DOG/go-sqlmock v1.5.2
 	github.com/caarlos0/env/v10 v10.0.0
-	github.com/glebarez/sqlite v1.10.0
+	github.com/glebarez/sqlite v1.11.0
 	github.com/go-faker/faker/v4 v4.3.0
 	github.com/go-playground/validator/v10 v10.19.0
 	github.com/gofiber/contrib/fiberzerolog v1.0.0
