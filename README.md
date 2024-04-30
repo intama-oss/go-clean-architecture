@@ -75,8 +75,8 @@ Project ini menggunakan beberapa library, yaitu:
 - [Gorm SQLite](https://github.com/glebarez/sqlite) sebagai library untuk menggunakan SQLite dengan GORM.
 - [Gorm MySQL](https://gorm.io/driver/mysql) sebagai library untuk menggunakan MySQL dengan GORM.
 - [SQL Mock](https://github.com/DATA-DOG/go-sqlmock) sebagai library untuk mocking SQL.
-- [carlos0/env](https://https://github.com/caarlos0/env) sebagai library untuk mengakses environment.
-- [rs/zerolog](https://https://github.com/rs/zerolog) sebagai library untuk logging zero allocation.
+- [carlos0/env](https://github.com/caarlos0/env) sebagai library untuk mengakses environment.
+- [rs/zerolog](https://github.com/rs/zerolog) sebagai library untuk logging zero allocation.
 - [stretchr/testify](https://github.com/stretchr/testify) sebagai library untuk testing.
 - [go-faker/faker](https://github.com/go-faker/faker) sebagai library untuk membuat data palsu pada testing.
 - [go-playground/validator](https://github.com/go-playground/validator) sebagai library untuk validasi data.
