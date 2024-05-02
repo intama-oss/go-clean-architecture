@@ -9,7 +9,7 @@ require (
 	github.com/go-faker/faker/v4 v4.4.0
 	github.com/go-playground/validator/v10 v10.19.0
 	github.com/gofiber/contrib/fiberzerolog v1.0.1
-	github.com/gofiber/contrib/swagger v1.1.1
+	github.com/gofiber/contrib/swagger v1.1.2
 	github.com/gofiber/fiber/v2 v2.52.4
 	github.com/rs/zerolog v1.32.0
 	github.com/stretchr/testify v1.9.0
