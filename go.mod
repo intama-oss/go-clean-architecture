@@ -11,7 +11,7 @@ require (
 	github.com/gofiber/contrib/fiberzerolog v1.0.1
 	github.com/gofiber/contrib/swagger v1.1.2
 	github.com/gofiber/fiber/v2 v2.52.4
-	github.com/rs/zerolog v1.32.0
+	github.com/rs/zerolog v1.33.0
 	github.com/stretchr/testify v1.9.0
 	github.com/swaggo/swag v1.16.3
 	gorm.io/driver/mysql v1.5.6
