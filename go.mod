@@ -7,7 +7,7 @@ require (
 	github.com/caarlos0/env/v10 v10.0.0
 	github.com/glebarez/sqlite v1.11.0
 	github.com/go-faker/faker/v4 v4.4.1
-	github.com/go-playground/validator/v10 v10.20.0
+	github.com/go-playground/validator/v10 v10.22.0
 	github.com/gofiber/contrib/fiberzerolog v1.0.1
 	github.com/gofiber/contrib/swagger v1.1.2
 	github.com/gofiber/fiber/v2 v2.52.4
