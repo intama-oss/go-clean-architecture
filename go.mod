@@ -10,7 +10,7 @@ require (
 	github.com/go-playground/validator/v10 v10.20.0
 	github.com/gofiber/contrib/fiberzerolog v1.0.1
 	github.com/gofiber/contrib/swagger v1.1.2
-	github.com/gofiber/fiber/v2 v2.52.4
+	github.com/gofiber/fiber/v2 v2.52.5
 	github.com/rs/zerolog v1.33.0
 	github.com/stretchr/testify v1.9.0
 	github.com/swaggo/swag v1.16.3
