@@ -7,7 +7,7 @@ require (
 	github.com/caarlos0/env/v10 v10.0.0
 	github.com/glebarez/sqlite v1.11.0
 	github.com/go-faker/faker/v4 v4.4.1
-	github.com/go-playground/validator/v10 v10.20.0
+	github.com/go-playground/validator/v10 v10.26.0
 	github.com/gofiber/contrib/fiberzerolog v1.0.1
 	github.com/gofiber/contrib/swagger v1.1.2
 	github.com/gofiber/fiber/v2 v2.52.5
@@ -24,7 +24,7 @@ require (
 	github.com/asaskevich/govalidator v0.0.0-20230301143203-a9d515a09cc2 // indirect
 	github.com/davecgh/go-spew v1.1.1 // indirect
 	github.com/dustin/go-humanize v1.0.1 // indirect
-	github.com/gabriel-vasile/mimetype v1.4.3 // indirect
+	github.com/gabriel-vasile/mimetype v1.4.8 // indirect
 	github.com/glebarez/go-sqlite v1.22.0 // indirect
 	github.com/go-openapi/analysis v0.22.3 // indirect
 	github.com/go-openapi/errors v0.21.1 // indirect
@@ -60,12 +60,12 @@ require (
 	github.com/valyala/fasthttp v1.52.0 // indirect
 	github.com/valyala/tcplisten v1.0.0 // indirect
 	go.mongodb.org/mongo-driver v1.14.0 // indirect
-	golang.org/x/crypto v0.21.0 // indirect
-	golang.org/x/net v0.23.0 // indirect
-	golang.org/x/sync v0.6.0 // indirect
-	golang.org/x/sys v0.18.0 // indirect
-	golang.org/x/text v0.14.0 // indirect
-	golang.org/x/tools v0.19.0 // indirect
+	golang.org/x/crypto v0.33.0 // indirect
+	golang.org/x/net v0.34.0 // indirect
+	golang.org/x/sync v0.11.0 // indirect
+	golang.org/x/sys v0.30.0 // indirect
+	golang.org/x/text v0.22.0 // indirect
+	golang.org/x/tools v0.21.1-0.20240508182429-e35e4ccd0d2d // indirect
 	gopkg.in/yaml.v2 v2.4.0 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 	modernc.org/libc v1.41.0 // indirect
